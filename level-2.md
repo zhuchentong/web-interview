@@ -408,8 +408,25 @@ d. nextTick : 更新数据后立即操作dom
 
 ---
 
+18. 下面的说法不正确的是：
 
- 19. 下面代码的输出是
+a. componentWillReceiveProps将会在组件将要接收到属性的时候调用
+
+b. shouldComponentUpdate默认返回false
+ 
+c. componentWillMount是组件即将被装载、渲染到页面上
+
+d. componentWillUnmount是组件即将销毁
+
+> 答案为 b
+
+> 解析:
+
+```
+shouldComponentUpdate默认返回true, 可以返回false，如果返回false, 接收数据后不更新，阻止render调用，后面的函数不会被继续执行了
+```
+
+19. 下面代码的输出是
 
  ```
 setTimeout(_ => console.log(4))
